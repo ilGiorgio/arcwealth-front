@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "42069:42069"
+    volumes:
+      - ../assets:/app/assets
+

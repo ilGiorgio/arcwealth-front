@@ -1,0 +1,13 @@
+{{ define "portal" }}
+<title>Lotix Documentación</title>
+<div id="viewer" class="responsive-container documentation flex" hx-swap="outerHTML">
+    {{ template "sidebar" . }}
+    <div class="doc-container flex column gap-1 mt-2">
+        {{ .Current.Content }}
+        <div class="mod-time flex gap-half align-center mt-2">
+            <img src="/images/clock.svg" alt="clock" style="width: 1rem;" >
+            <p>Ultima actualización: {{ .Current.UpdatedAt }}</p>
+        </div>
+    </div>
+</div>
+{{ end }}

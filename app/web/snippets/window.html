@@ -1,0 +1,12 @@
+{{ define "window" }}
+<title>Arcwealth</title>
+<div id="content" hx-swap-oob="true" class="responsive-container frame flex">
+    <div class="doc-container flex column gap-1 mt-2">
+        {{ .Content }}
+        <div class="mod-time flex gap-half align-center mt-2">
+            <img src="/images/clock.svg" alt="clock" style="width: 1rem;" >
+            <p>Ultima actualización: {{ .ModTime }}</p>
+        </div>
+    </div>
+</div>
+{{ end }}

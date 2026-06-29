@@ -1,0 +1,29 @@
+<!-- =========================| NAVBAR |=============================-->
+{{ block "navbar" .}}
+<nav class="navbar">
+    <div class="flex w-full responsive-container justify-around">
+        <div class="w-full">
+            <a
+                hx-target="body"
+                href="/"
+            >
+                Arcwealth
+            </a>
+        </div>
+        <div class="w-full">
+            <ul class="flex w-full justify-between no-bullet">
+                <li>
+                    <a
+                        hx-target="#content"
+                        hx-get="/signup"
+                        hx-push-url="true"
+                        href="/signup"
+                    >
+                        sign up
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{{ end }}

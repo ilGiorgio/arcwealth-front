@@ -1,0 +1,5 @@
+/app/tmp/
+/app/dist/
+/app/node_modules/
+/app/views/**/*.go
+

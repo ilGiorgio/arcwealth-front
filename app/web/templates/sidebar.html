@@ -1,0 +1,24 @@
+{{ define "sidebar" }}
+<div class="flex column gap-1">
+    <h2>Documentación</h2>
+    <div class="sidebar flex column" >
+        <p class="bold">Contenidos</p>
+        <ul class="no-bullet sidebar-list">
+            {{ range .Metafield.Indexes }}
+                <li>
+                    <a
+                        hx-get={{ .Url }}
+                        hx-target="#viewer"
+                        hx-push-url="true"
+                        {{ if .Selected }}
+                        class="selected"
+                        {{ end }}
+                    >
+                        {{ .Title }}
+                    </a>
+                </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>
+{{ end }}
