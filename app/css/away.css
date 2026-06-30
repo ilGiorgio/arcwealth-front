@@ -58,6 +58,10 @@ body {
     gap: .5rem;
 }
 
+.basis-50 {
+    flex-basis: 50%;
+}
+
 .p-1 {
     padding: 1rem;
 }
@@ -198,10 +202,9 @@ a {
 
 h2, h3, h4, h5, h6 {
     color: var(--color-text-primary);
-    margin-top: 2rem;
     color: var(--color-primary);
     font-weight: 600;
-    margin-top: 1.5em;
+    margin-top: .5em;
 }
 
 
@@ -279,20 +282,19 @@ pre {
 .form-container {
     justify-content: center;
     align-items: center;
-    flex-basis: 90%;
-    padding: 0 1rem 0 1rem;
+    flex-basis: 100%;
     gap: 2rem;
     width: 100%;
 }
 
 .form-container > form {
     color: var(--color-text-primary);
-    padding: 0 1rem 0 1rem;
+    padding: 2rem;
     gap: 1rem;
     background-color: var(--color-surface);
-    padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-width: 400px;
 }
 
 .frame {

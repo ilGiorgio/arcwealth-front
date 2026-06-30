@@ -11,7 +11,7 @@ type Module struct {
 }
 
 func NewModule(name string, template template.HTML) Module {
-	return Module {
+	return Module{
 		Name: name,
 		Data: template,
 	}
@@ -28,55 +28,55 @@ func NewPage(module Module) Page {
 }
 
 type Index struct {
-	Name string
-	Url string
-	Title string
+	Name     string
+	Url      string
+	Title    string
 	Selected bool
 }
 
 func CreateIndex(a string, b string, c string) Index {
-	return Index {
-		Name: a,
-		Url: b,
-		Title: c,
+	return Index{
+		Name:     a,
+		Url:      b,
+		Title:    c,
 		Selected: false,
 	}
 }
 
 type Metafield struct {
-	Module string
+	Module  string
 	Indexes []Index
 }
 
 func CreateMetafield(a string, b []Index) Metafield {
-	return Metafield {
-		Module: a,
+	return Metafield{
+		Module:  a,
 		Indexes: b,
 	}
 }
 
 type Current struct {
 	UpdatedAt string
-	Content template.HTML
-	Selected Index
+	Content   template.HTML
+	Selected  Index
 }
 
 func NewCurrent(a string, b template.HTML, c Index) Current {
-	return Current {
+	return Current{
 		UpdatedAt: a,
-		Content: b,
-		Selected: c,
+		Content:   b,
+		Selected:  c,
 	}
 }
 
 type Data struct {
-	Current Current
+	Current   Current
 	Metafield Metafield
 }
 
 func NewData(current Current, metafield Metafield) Data {
-	return Data {
-		Current: current,
+	return Data{
+		Current:   current,
 		Metafield: metafield,
 	}
 }
@@ -85,5 +85,3 @@ type FileInfo struct {
 	Content template.HTML
 	ModTime string
 }
-
-
