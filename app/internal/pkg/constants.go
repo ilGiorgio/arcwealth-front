@@ -13,6 +13,7 @@ const (
 	TemplatePortal       = "portal"
 	TemplateFrame        = "frame"
 	TemplateWindow       = "window"
+	TemplateModalSuccess = "success"
 )
 
 // URL Params

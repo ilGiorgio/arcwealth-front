@@ -1,0 +1,58 @@
+{{ block "signup" . }}
+<div class="flex form-container " id="content">
+    <form
+        class="flex column gap-1 p-1"
+        hx-post="/register"
+        hx-swap="outerHTML"
+        hx-target="#content"
+        action="http://localhost:8081/user/sign-up"
+        method="POST"
+    >
+        <h2>Sign Up</h2>
+        <div class="flex column">
+            <lable for="email" class="p-thin">Email</lable>
+            <input class="p-thin rounded-1" type="email" name="email" />
+        </div>
+        <div>
+            <div class="flex column">
+                <label class="p-thin" for="name">User Name</label>
+                <input class="p-thin rounded-1" type="text" name="name" />
+            </div>
+            <div class="flex column">
+                <label class="p-thin" for="dob">Date of Birth</label>
+                <input class="p-thin rounded-1" type="date" name="dob" />
+            </div>
+        </div>
+        <div class="flex gap-1">
+            <div class="flex column">
+                <label class="p-thin" for="password">Password</label>
+                <input class="p-thin rounded-1" type="password" name="password" />
+            </div>
+            <div class="flex column">
+                <label class="p-thin" for="confirm-password">Confirm Password</label>
+                <input class="p-thin rounded-1" type="password" name="confirmPassword" />
+            </div>
+        </div>
+        <div class="flex row gap-1 w-full">
+            <div class="flex column basis-50">
+                <label class="p-thin" for="gender">Gender</label>
+                <select class="p-thin" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="flex column basis-50">
+                <label class="p-thin" for="currency">Currency</label>
+                <select class="p-thin" name="currency">
+                    {{ range . }}
+                        <option value="{{ .Id }}">{{.CurrencyCode}}</option>
+                    {{ end }}
+                </select>
+            </div>
+        </div>
+        <button class="p-thin" type="submit">Sign Up</button>
+    </form>
+</div>
+{{ end }}
+

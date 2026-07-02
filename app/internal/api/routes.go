@@ -1,9 +1,10 @@
 package api
 
 import (
-	"app/internal/service"
 	"html/template"
 	"io"
+
+	"app/internal/service"
 
 	"github.com/labstack/echo/v4"
 )
@@ -23,7 +24,8 @@ func newTemplate() *Templates {
 		templates: template.Must(template.ParseFiles(
 			"web/index.html",
 			"web/pages/frame.html",
-			"web/pages/signup.html",
+			"web/components/signup.html",
+			"web/templates/modals/success.html",
 			"web/snippets/introduction.html",
 			"web/snippets/portal.html",
 			"web/snippets/window.html",
@@ -41,6 +43,8 @@ func RegisterRoutes(e *echo.Echo) {
 	e.GET("/", service.LandingPage)
 
 	e.GET("/signup", service.SignupPage)
+
+	e.POST("/register", service.RegisterUser)
 
 	e.GET("/docs/:file", service.DocsModule)
 

@@ -1,12 +1,10 @@
 package service
 
 import (
+	"textnet/http"
+
 	"app/internal/domain"
 	"app/internal/pkg"
-	"encoding/json"
-	"fmt"
-	"net/http"
-	"time"
 
 	"github.com/labstack/echo/v4"
 )
@@ -14,33 +12,6 @@ import (
 // LandingPage: It returns the landing HTML page
 func LandingPage(c echo.Context) error {
 	return c.Render(http.StatusOK, pkg.TemplateIndex, "")
-}
-
-// LandingPage: It returns the landing HTML page
-func SignupPage(c echo.Context) error {
-	uri := pkg.Currencies
-	client := &http.Client{
-		Timeout: 10 * time.Second,
-	}
-
-	response, err := client.Get(uri)
-	if err != nil {
-		fmt.Println(err)
-		return c.Render(http.StatusOK, pkg.TemplateSignup, "")
-	}
-
-	defer response.Body.Close()
-
-	if response.StatusCode != http.StatusOK {
-		return c.Render(http.StatusOK, pkg.TemplateSignup, "")
-	}
-	var currencies domain.ApiResponse[[]domain.Currency]
-
-	err = json.NewDecoder(response.Body).Decode(&currencies)
-
-	fmt.Println(currencies.Data)
-
-	return c.Render(http.StatusOK, pkg.TemplateSignup, currencies.Data)
 }
 
 // DocsModule: It parses the content of the entire docs directory and build in memory the sidebar index

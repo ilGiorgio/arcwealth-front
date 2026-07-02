@@ -1,17 +1,18 @@
 <!-- =========================| NAVBAR |=============================-->
 {{ block "navbar" .}}
 <nav class="navbar">
-    <div class="flex w-full responsive-container justify-around">
+    <div class="flex w-full responsive-container justify-around align-center">
         <div class="w-full">
             <a
                 hx-target="body"
                 href="/"
+                class="flex logo-container"
             >
-                Arcwealth
+                <img class="logo" src="/images/arcwealth_logo.svg" alt="logo" alt="logo">
             </a>
         </div>
         <div class="w-full">
-            <ul class="flex w-full justify-between no-bullet">
+            <ul class="flex w-full justify-end no-bullet align-center">
                 <li>
                     <a
                         hx-target="#content"

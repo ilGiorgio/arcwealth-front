@@ -1,0 +1,108 @@
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="irisGradP" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#FFE9A0"/>
+      <stop offset="55%" stop-color="#F5B62E"/>
+      <stop offset="100%" stop-color="#D68A12"/>
+    </radialGradient>
+    <linearGradient id="ringGradP" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD273"/>
+      <stop offset="50%" stop-color="#EAA732"/>
+      <stop offset="100%" stop-color="#C97F15"/>
+    </linearGradient>
+    <radialGradient id="foreheadGrad" cx="50%" cy="0%" r="100%">
+      <stop offset="0%" stop-color="#8A94A0"/>
+      <stop offset="65%" stop-color="#8A94A0"/>
+      <stop offset="100%" stop-color="#8A94A0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="dropShadowP" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#dropShadowP)">
+
+    <!-- ===== bold anime-style ring ===== -->
+    <circle cx="150" cy="150" r="109" fill="none" stroke="#20201E" stroke-width="25"/>
+    <circle cx="150" cy="150" r="109" fill="none" stroke="url(#ringGradP)" stroke-width="19"/>
+    <path d="M62,78 A114,114 0 0 1 214,64" stroke="#FFEFC2" stroke-width="7" fill="none" opacity="0.85" stroke-linecap="round"/>
+    <g stroke="#B5791C" stroke-width="19" fill="none" stroke-linecap="butt">
+      <path d="M258.59,140.49 A109,109 0 0 1 258.59,159.51"/>
+      <path d="M212.52,239.29 A109,109 0 0 1 196.06,248.79"/>
+      <path d="M103.94,248.79 A109,109 0 0 1 87.48,239.29"/>
+      <path d="M41.41,159.51 A109,109 0 0 1 41.41,140.49"/>
+      <path d="M87.48,60.71 A109,109 0 0 1 103.94,51.21"/>
+      <path d="M196.06,51.21 A109,109 0 0 1 212.52,60.71"/>
+    </g>
+    <g stroke="#20201E" stroke-width="2.5" fill="none" stroke-linecap="butt" opacity="0.55">
+      <path d="M258.59,140.49 A109,109 0 0 1 258.59,159.51"/>
+      <path d="M212.52,239.29 A109,109 0 0 1 196.06,248.79"/>
+      <path d="M103.94,248.79 A109,109 0 0 1 87.48,239.29"/>
+      <path d="M41.41,159.51 A109,109 0 0 1 41.41,140.49"/>
+      <path d="M87.48,60.71 A109,109 0 0 1 103.94,51.21"/>
+      <path d="M196.06,51.21 A109,109 0 0 1 212.52,60.71"/>
+    </g>
+
+    
+    <!-- ===== Pokemon-style cat creature ===== -->
+    <g transform="translate(150,150) scale(1.22) translate(-150,-150)">
+      <!-- ears: pointed, energetic, cel-shaded -->
+      <path d="M109,122 Q82,94 102,56 Q130,86 140,116 Z" fill="#8A94A0" stroke="#20201E" stroke-width="5" stroke-linejoin="round"/>
+      <path d="M191,122 Q218,94 198,56 Q170,86 160,116 Z" fill="#8A94A0" stroke="#20201E" stroke-width="5" stroke-linejoin="round"/>
+      <!-- head -->
+      <path d="M150,94 C176,94 191,101 201,122 C212,141 217,151 211,160 C207,174 195,190 176,200 C167,206 158,210 150,210 C142,210 133,206 124,200 C105,190 93,174 89,160 C83,151 88,141 99,122 C109,101 124,94 150,94 Z"
+            fill="#FFFFFF" stroke="#20201E" stroke-width="5" stroke-linejoin="round"/>
+
+      <!-- cel-shade on right side of face -->
+      <path d="M150,94 C176,94 191,101 201,122 C212,141 217,151 211,160 C207,174 195,190 176,200 C167,206 158,210 150,210 L150,94 Z"
+            fill="#EDEFF2" opacity="0.55"/>
+
+      <!-- gray forehead patch, covering forehead + ear bases, down to the eye line, blended with no border -->
+      <path d="M150,94 C168,94 182,99 193,110 C202,118 208,124 205,131 C203,136 195,137 189,133 C186,133 183,136 178,136 C171,131 161,128 150,128 C139,128 129,131 122,136 C117,136 114,133 111,133 C105,137 97,136 95,131 C92,124 98,118 107,110 C118,99 132,94 150,94 Z"
+            fill="url(#foreheadGrad)" stroke="none"/>
+
+      <!-- anime eyes: round, bold, expressive -->
+      <ellipse cx="119" cy="136" rx="15" ry="16.5" fill="#FFFFFF" stroke="#20201E" stroke-width="4"/>
+      <ellipse cx="181" cy="136" rx="15" ry="16.5" fill="#FFFFFF" stroke="#20201E" stroke-width="4"/>
+      <path d="M104,131 Q119,120 134,131 L134,136 Q119,124 104,136 Z" fill="#20201E"/>
+      <path d="M166,131 Q181,120 196,131 L196,136 Q181,124 166,136 Z" fill="#20201E"/>
+      <ellipse cx="119" cy="136" rx="13" ry="14.5" fill="url(#irisGradP)"/>
+      <ellipse cx="181" cy="136" rx="13" ry="14.5" fill="url(#irisGradP)"/>
+      <ellipse cx="119" cy="137" rx="9.5" ry="11.5" fill="#2B2119"/>
+      <ellipse cx="181" cy="137" rx="9.5" ry="11.5" fill="#2B2119"/>
+      <circle cx="123" cy="130" r="2.6" fill="#FFFFFF"/>
+      <circle cx="185" cy="130" r="2.6" fill="#FFFFFF"/>
+      <!-- heart-shaped nose-bridge marking -->
+      <path d="M138,150 C133,142 144,136 150,140 C156,136 167,142 162,150 C159,156 152,162 150,164 C148,162 141,156 138,150 Z"
+            fill="#8A94A0" stroke="#20201E" stroke-width="3.5" stroke-linejoin="round"/>
+
+      <!-- nose -->
+      <path d="M144,166 C145.5,163.5 154.5,163.5 156,166 C157,169 152,172 150,173 C148,172 143,169 144,166 Z" fill="#20201E"/>
+
+      <!-- mouth -->
+      <path d="M150,173 L150,178" stroke="#20201E" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M150,178 Q141,186 130,179" stroke="#20201E" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M150,178 Q159,186 170,179" stroke="#20201E" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+      <!-- fang peek for playful Pokemon energy -->
+      <path d="M138,181 L141,188 L144,181 Z" fill="#FFFFFF" stroke="#20201E" stroke-width="1.5" stroke-linejoin="round"/>
+
+      <!-- whiskers -->
+      <g stroke="#20201E" stroke-width="2.6" opacity="0.9" stroke-linecap="round" fill="none">
+        <path d="M110,162 Q84,156 66,161"/>
+        <path d="M110,172 Q84,176 66,184"/>
+        <path d="M190,162 Q216,156 234,161"/>
+        <path d="M190,172 Q216,176 234,184"/>
+      </g>
+
+      <!-- collar -->
+      <path d="M120,203 Q150,230 180,203" stroke="#E0392F" stroke-width="14" fill="none" stroke-linecap="round"/>
+      <path d="M124,200 Q150,220 176,200" stroke="#F27C73" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.75"/>
+
+      <!-- gold plaque -->
+      <circle cx="150" cy="226" r="4" fill="#F5C230" stroke="#20201E" stroke-width="2.5"/>
+      <rect x="112" y="227" width="76" height="19" rx="6" fill="#F5C230" stroke="#20201E" stroke-width="3.5"/>
+      <text x="150" y="240.5" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="800" fill="#20201E" text-anchor="middle" letter-spacing="0.4">ARCWEALTH</text>
+    </g>
+  </g>
+</svg>

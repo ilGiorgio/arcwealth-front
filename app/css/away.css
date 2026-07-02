@@ -151,6 +151,10 @@ body {
     justify-content: space-around;
 }
 
+.justify-end {
+    justify-content: flex-end;
+}
+
 .relative {
     position: relative;
 }
@@ -184,6 +188,11 @@ footer {
     background-color: var(--footer-background);
     position: relative;
     bottom: 0;
+}
+
+a:hover {
+    color: var(--color-accent);
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -227,8 +236,8 @@ pre {
 }
 
 .navbar {
-    padding: 1rem;
     background-color: var(--color-surface);
+    padding: 0 1rem 0 1rem;
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -247,11 +256,6 @@ pre {
     width: 100%;
 }
 
-.lotix--logo {
-    font-size: 6rem;
-    color: #fafafafa;
-}
-
 .current-content {
     max-width: 700px;
     margin: 0 auto;
@@ -266,6 +270,16 @@ pre {
     margin-left: 2rem;
     margin-top: 1rem;
     gap: 5px;
+}
+
+.logo-container {
+    max-width: 75px;
+    width: 100%;
+}
+
+.logo {
+    width: 100%;
+    object-fit: cover;
 }
 
 .footer-content {
